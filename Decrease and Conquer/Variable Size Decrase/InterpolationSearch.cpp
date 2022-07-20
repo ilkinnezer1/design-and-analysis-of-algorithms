@@ -21,7 +21,7 @@ int interpolationSearch(int arr[], int low, int high, int target)
     else{
     // Searching in the right side
         return interpolationSearch(arr, position + 1, high, target);
-    }
+    } 
     }
     return -1;
 }
