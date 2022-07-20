@@ -14,7 +14,7 @@ std::pair<int, int> findMax(int arr[], int low, int high){
     // Recursion step
     // Mid point used to divide a given array into 2 parts
     int midPoint = (low + high) / 2;
-    
+     
     return max(findMax(arr, midPoint, high), findMax(arr, low, midPoint));
 }
 
