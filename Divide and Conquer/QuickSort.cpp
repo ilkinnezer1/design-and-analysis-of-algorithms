@@ -1,4 +1,8 @@
 #include <iostream>
+// Quicksort Algorithm with Lomuto Partitioning using Divide-and-Conquer algorithm design paradigm
+// Lomuto makes algorithm linear and easy to implement 
+// Time Complexity for N elements = J + (N-J) + pivot element // BTW, N divides into J and N-J
+// Generally, Time complexity of quicksort is => O(nlogn) 
 
 void swap(int *a, int *b)
 {
@@ -24,7 +28,6 @@ int lomutoPartitioning(int arr[], int low, int high){
     return (smallerElementIndex+1);
 }
 
-
 void quickSort(int arr[], int low, int high){
     if(low < high)
     {
@@ -47,7 +50,7 @@ int main()
 {
     int arr[] = {4,8,2,4,6,8,9};
     int size = sizeof(arr)/ sizeof (int);
-    quickSort(arr,0, size-1);
+    quickSort(arr,0, size - 1);
     std:: cout << "Sorted array: ";
     print(arr, size);
 }
