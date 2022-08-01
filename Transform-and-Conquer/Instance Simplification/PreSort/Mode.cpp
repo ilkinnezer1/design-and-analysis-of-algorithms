@@ -1,8 +1,8 @@
 #include <iostream>
 #include <algorithm>
 #include <cmath>
-// Mode is very useful in statistics and here I used transform-and-conquer paradigm to design an 
-// algorithm by using presort techique ; 
+// Mode is very useful in statistics and here I used transform-and-conquer paradigm to design the
+// algorithm by using presort techique; 
 // It defines an element that's most frequency in a given array;
 // Time complexity is calculated by adding input size and max value in a given array
 // As a result O(size + max) => with sorting it will be => O(nlogn) but for the worst case => O(n^2);
