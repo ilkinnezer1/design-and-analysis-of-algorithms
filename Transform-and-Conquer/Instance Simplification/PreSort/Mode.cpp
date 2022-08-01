@@ -1,7 +1,6 @@
 #include <iostream>
 #include <algorithm>
 #include <cmath>
-
 // Mode is very useful in statistics and here I used transform-and-conquer paradigm to design an 
 // algorithm by using presort techique ; 
 // It defines an element that's most frequency in a given array;
@@ -19,8 +18,6 @@ int compare(const void* x, const void* y)
 
 	return 0;
 }
-
-
 void findModeWithPresort(int arr[], int size)
 {
 
@@ -32,10 +29,9 @@ void findModeWithPresort(int arr[], int size)
     int temp = maxElement + 1;
     int modeFrequency[temp];
 
-    for(int i = 0 ; i <  temp; ++i){
+    for(int i = 0 ; i <  temp; ++i)
         modeFrequency[i] = 0;
-    }
-
+    
     // Storing each input frequency
     for(int j = 0; j < size; ++j)
         modeFrequency[arr[j]]++;
@@ -48,7 +44,6 @@ void findModeWithPresort(int arr[], int size)
             mode = i;
         }
     }
-
     std:: cout<< "mode is: " << mode;
 }
 
