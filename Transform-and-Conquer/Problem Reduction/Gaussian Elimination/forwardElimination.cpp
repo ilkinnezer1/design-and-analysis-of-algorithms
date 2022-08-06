@@ -26,13 +26,12 @@ void gaussianElimination(double mat[SIZE][SIZE+1])
 		zero row is 0, * system has infinitely
 		many solutions, else inconsistent*/
 		if (mat[singular_flag][SIZE])
-			std::printf("Inconsistent System.");
+			std::cout << "Mathematical Error";
 		else
-			std::printf("May have infinitely many "
-				"solutions.");
+			std::cout << "May have infinitely many " << "solutions.";
 
 		return;
-	}
+
 
 	/* get solution to system and print it using
 	backward substitution */
