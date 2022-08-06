@@ -1,6 +1,6 @@
 #include<iostream>
 
-#define SIZE 10	 // Number of unknowns
+#define SIZE 3	 // Number of unknowns
 
 //DECLARATIONS
 
@@ -26,12 +26,13 @@ void gaussianElimination(double mat[SIZE][SIZE+1])
 		zero row is 0, * system has infinitely
 		many solutions, else inconsistent*/
 		if (mat[singular_flag][SIZE])
-			std::cout << "Mathematical Error";
+			std::cout <<("Inconsistent System.");
 		else
-			std::cout << "May have infinitely many " << "solutions.";
+			std::printf("May have infinitely many "
+				"solutions.");
 
 		return;
-
+	}
 
 	/* get solution to system and print it using
 	backward substitution */
@@ -76,7 +77,7 @@ int forwardElim(double mat[SIZE][SIZE+1])
 
 	    // 	 if a principal diagonal element is zero,
 	    //  it denotes that matrix is singular, and
-	    // 	will lead to a division-by-zero later. 
+	// 	will lead to a division-by-zero later. 
 		if (!mat[k][i_max])
 			return k; // Matrix is singular
 
@@ -133,9 +134,9 @@ void backSub(double mat[SIZE][SIZE+1])
 		x[i] = x[i]/mat[i][i];
 	}
 
-	std::cout << "\nSolution for the system:\n" ;
+	std::cout<< "\nSolution for the system:\n";
 	for (int i=0; i<SIZE; i++)
-		printf("%lf\n", x[i]);
+		std::cout <<  x[i] << std::endl;
 }
 
 // Driver program
