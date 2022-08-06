@@ -20,7 +20,7 @@ void gaussianElimination(double mat[SIZE][SIZE+1])
 	/* if matrix is singular */
 	if (singular_flag != -1)
 	{
-		printf("Singular Matrix.\n");
+		std::cout << "Singular Matrix" << std::endl;
 
 		/* if the RHS of equation corresponding to
 		zero row is 0, * system has infinitely
@@ -28,8 +28,8 @@ void gaussianElimination(double mat[SIZE][SIZE+1])
 		if (mat[singular_flag][SIZE])
 			std::cout <<("Inconsistent System.");
 		else
-			std::printf("May have infinitely many "
-				"solutions.");
+			std::cout << "May have infinitely many " << std::endl;
+				std:: cout << "solutions.";
 
 		return;
 	}
